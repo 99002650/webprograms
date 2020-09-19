@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-2.2.3.min.js" ></script>
+    <script>
+        $(document).ready(function(){
+            $('#has').click(function(){
+                // select all div elements which has a p element
+                $('div').has('p').css('background-color','green');
+                $('p').has('span,a').css('background-color','orange');
+            });
+            $('#find').click(function(){
+                // select  p,h3 elements which inside div
+                $('div').find('p,h3').css('text-transform','uppercase');
+                $('p').find('span').css('text-decoration','underline');
+            });
+           
+        });
+    </script>
+</head>
+<body>
+    <h3 id="has">Has</h3>
+    <h3 id="find">Find</h3>
+    <div>
+        <p>Paragraph inside div <span>Hello</span></p>
+        <h3>Header inside div</h3>
+    </div>
+    <p>
+        <a href="">Search</a><span>welcome</span>
+    </p>
+</body>
+</html>

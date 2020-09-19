@@ -1,0 +1,21 @@
+h1, h3#headthree, h1#headone {
+  color: red;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+
+h1#headone {
+  background-color: rebeccapurple;
+}
+
+h2, h3#headthree, h2#headtwo {
+  text-decoration: underline;
+}
+
+h2#headtwo {
+  background-color: blue;
+}
+
+h3#headthree {
+  font-style: italic;
+}

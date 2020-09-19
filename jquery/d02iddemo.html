@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-2.2.3.min.js" ></script>
+    <script>
+        $(document).ready(function(){
+            $('#myid').click(function(){
+                $(this).css({'color':'red','background-color':'yellow'});
+            });
+            $('h3').click(function(){
+                $('#mydiv').text('Have a great day').css('color','blue');
+                $('#newdiv').html('<b>Have a great day</b>').css('color','blue');
+            });
+        });
+    </script>
+</head>
+<body>
+    <p id = "myid">Welcome to jQuery</p>
+    <h3>Show message</h3>
+    <div id="mydiv">Welcome</div>
+    <div id="newdiv">Hello</div>
+</body>
+</html>

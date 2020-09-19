@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            height:100px;
+            width: 100px;
+            float:left;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-2.2.3.min.js" ></script>
+    <script>
+        // $(selector).fadeIn(speed,callback);
+        //speed - "slow", "fast", or milliseconds.
+        $(document).ready(function(){
+            $('#inbutton').click(function(){
+              $('#div1').fadeIn(1000,function(){
+                $('#div1').height('200px');
+              })
+            });
+            $('#outbutton').click(function(){
+              $('#div2').fadeOut("slow");
+            });
+            $('#togglebutton').click(function(){
+              $('#div2').fadeToggle("slow",function(){
+                $('#div2').css('background-color','cyan')
+              });
+              });
+        // $(selector).fadeTo(speed,opacity,callback);
+        //opacity -value between 0 and 1
+
+              $('#fadebutton').click(function(){
+              $('#div1').fadeTo("slow",0.2);
+              $('#div2').fadeTo("slow",0.2);
+              $('#div3').fadeTo("slow",0.1);
+            });
+        });
+    </script>
+</head>
+<body>
+
+    <div id="div1" style="background-color: green;"></div>
+    <div id="div2" style="background-color: orange;"></div>
+    <div id="div3" style="background-color: blue;"></div>
+    <br>
+    <button id="inbutton" >Fade In</button>
+    <button id="outbutton">Fade Out</button>
+    <button id="togglebutton">Fade Toggle</button>
+    <button id="fadebutton">Fade To</button>
+</body>
+</html>

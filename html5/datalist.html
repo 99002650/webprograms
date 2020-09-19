@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Datalist Demo </title>
+
+</head>
+<body>
+<form  method="get" action="basic.html">
+
+<h2>Datalist</h2>
+Choose city<input list="city" name="mcity"/>
+<datalist id="city">
+ <option value="Coorg"/>
+ <option value="Bangalore" />
+ <option  value="Madras" />
+ <option value="Pune" />
+ <option value="Cochin"/>
+</datalist>
+<h2>Select</h2>
+<select name="city">
+    <option value="Coorg" />Coorg
+    <option value="Bangalore" />
+    <option label="Chennai" value="Madras" />
+    <option value="Pune" />
+    <option value="Cochin"/>
+</select>
+<input type="submit" value="click">
+</form>
+</body>
+</html>

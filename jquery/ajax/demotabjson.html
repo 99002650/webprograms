@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-2.2.3.min.js" ></script>
+    <script>
+      $(document).ready(function(){
+        $('button').click(function(){ 
+         $.get('books.json',function(data){
+             console.log(data);
+            $('#mydiv').html(JSON.stringify(data));
+            $('#mydiv').html(data);
+            data.forEach(function(element) {
+                $('#mydiv').html(element)
+            });
+           
+            });
+        });
+        });
+        
+    </script>
+</head>
+<body>
+    <button id="mybutton">Show Message</button>
+    <div id="mydiv"></div>
+</body>
+</html>

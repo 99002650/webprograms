@@ -1,0 +1,34 @@
+.header{
+  color:red;
+  letter-spacing: 5px;
+  font-family: Arial;
+  text-align: center;
+  text-decoration: underline;
+}
+.para{
+    font-family: Helvetica;
+    text-align: left;
+    background-color: green;   
+    font-style: italic; 
+}
+h2, h1,h3{
+    @extend .header;
+    background-color: rgb(111, 90, 133);
+}
+h2,h3{
+    text-align: left;
+}
+p.main{
+    @extend .para;
+    font-variant: small-caps;
+}
+p.sub{
+    @extend .para;
+    text-transform: uppercase;
+}
+
+
+
+    
+
+

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-2.2.3.min.js" ></script>
+    <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('p').click(function(){
+            $('a').append('Search here');
+            $('a').attr({
+                'href':'http://www.amazon.com',
+                'target':'_blank'
+            });
+            $('[href]').css('text-transform','uppercase');
+            $('a[id="myid"]').text('Shop here');
+            $('input[id="uname"]').val('Enter name')
+            console.log($('a[id="myid"]').attr('href'));
+            console.log($('a[id="myid"]').attr('target'));
+            $('a[id="myid"]').attr('href',function(){
+                $('p').css('color','red');
+            })
+        });
+        });
+    </script>
+   
+</head>
+<body>
+<p>Click here</p>
+<a href = "www.google.com">Show</a><br>
+<a href = "www.amazon.com" id="myid">Show</a><br>
+<input type="text" name="" id="uname">
+</body>
+</html>

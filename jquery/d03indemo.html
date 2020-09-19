@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-2.2.3.min.js" ></script>
+    <script>
+        $(document).ready(function(){
+            $('#setbutton').click(function(){
+                $('#username').val('Raju');
+            });
+            $('#showbutton').click(function(){
+                var username = $('#username').val();
+                $('#mydiv').html('Welcome '+username).css({'font-size':'20px','color':'red'})
+            });
+           
+        });
+    </script>
+</head>
+<body>
+    Enter name<input type="text" id="username"><br>
+    <input type="button" value="Show Name" id="showbutton">
+    <input type="button" value="Set Name" id="setbutton">
+    <div id="mydiv"></div>
+</body>
+</html>

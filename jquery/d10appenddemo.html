@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-2.2.3.min.js" ></script>
+    <script>
+        $(document).ready(function(){
+            $('p').click(function(){
+                $('p').before('<b>Welcome to jQuery</b>').after('This is a demo<br>');
+                $('a[id = "myid"]').after('<br>Search Now')
+                var elem1 = '<h2>Header One</h2>';
+                var elem2 = '<h2>Header Two</h2>';
+                $('input').before(elem1, elem2);
+            });
+           $('button').click(function(){
+               var elem1 = '<h3>Welcome</h3>'
+               var elem3 = $('div').html('Enjoy learning');
+               $('p').before(elem1).before(elem3)
+
+           })
+        });
+    </script>
+</head>
+<body>
+    <p>Click here</p>
+    <a href = "www.google.com">Show</a><br>
+    <a href = "www.amazon.com" id="myid">Show</a><br>
+    Name<input type="text" name="" id="uname">
+    <button>Add</button>
+</body>
+</html>

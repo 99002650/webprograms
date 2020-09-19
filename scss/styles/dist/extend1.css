@@ -1,0 +1,30 @@
+.header, h2, h1, h3 {
+  color: red;
+  letter-spacing: 5px;
+  font-family: Arial;
+  text-align: center;
+  text-decoration: underline;
+}
+
+.para, p.sub, p.main {
+  font-family: Helvetica;
+  text-align: left;
+  background-color: green;
+  font-style: italic;
+}
+
+h2, h1, h3 {
+  background-color: #6f5a85;
+}
+
+h2, h3 {
+  text-align: left;
+}
+
+p.main {
+  font-variant: small-caps;
+}
+
+p.sub {
+  text-transform: uppercase;
+}

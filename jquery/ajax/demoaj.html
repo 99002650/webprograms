@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js" ></script>
+    <script>
+     $(document).ready(function () {
+      $('button').click(function () {
+       var promise = $.ajax('hello.txt');
+      
+       promise.then(function(data,status){
+            var nextpromise = $.ajax('books.json')//,{data:data});
+            $('#mydiv').html(data);
+      
+       nextpromise.then(function(data,status){
+            $('#mydiv').append(JSON.stringify(data));
+       });
+      });
+       promise.then(function(err,status){
+        $('#mydiv').html(err+status);
+       });
+      });
+     });
+
+    </script>
+    </head>
+    
+    <body>
+     <button id="mybutton">Show Message</button>
+     <div id="mydiv"></div>
+    </body>
+    
+    </html>

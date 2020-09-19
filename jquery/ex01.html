@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <title>getElement Demo</title>
+    <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+    
+	<script>
+		var tv = ['Sony', 'Samsung', 'LG'];
+		var laptop = ['Lenova', 'HP', 'Mac'];
+		var mobile = ['Sony', 'Samsung', 'Motorola'];
+		$(document).ready(function(){
+            $('#choice').change(function(){
+            choice = $("#choice").val();
+            var mydiv = $("#myid").html('Welcome to ABC Showroom');
+            // console.log(mydiv.html());
+			switch(choice){
+				case 'laptop':
+					laptop.forEach(function(element) {
+                       mydiv = $("#myid").html() 
+                       mydiv+= $("#myid").html(element);
+                        console.log($("#myid").html());
+            
+                    });
+					break;
+				case 'tv':
+					tv.forEach(function(element){
+						// mydiv.html()+=element+"<br>";
+					});
+					break;
+				case 'mobile':
+					mobile.forEach(function(element){
+						// mydiv.innerHTML+=element+"<br>";
+					});
+			}
+        })
+		});	
+	</script>
+</head>
+<body>
+	<select id="choice">
+	<option value="laptop">Laptop</option>
+	<option value="mobile">Mobile</option>
+	<option value="tv">TV</option>
+	</select>
+	<div id = "myid" style ="background-color: yellow;"></div>
+</body>
+</html>

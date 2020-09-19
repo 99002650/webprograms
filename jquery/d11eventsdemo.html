@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+    
+    <script>
+        $(document).ready(function(){
+            // single event, single handler
+            $('p').on('mouseenter',function(){
+              $('h1').css('color','red');
+           })
+            // multiple event, single handler
+           $('p').on('click mouseleave',function(){
+              $('h1').css('letter-spacing','3px');
+     
+           })
+            // multiple event, multiple handler
+           $('h2').on({
+               click:function(){
+                $('p').text('Event Handling')
+               },
+               dblclick:function(){
+                $('h2').css('letter-spacing','3px');
+               },
+                mousemove:function(){
+                $('h2').css('color','orange');
+               },
+           })
+           
+         
+        });
+    </script>
+   
+</head>
+<body>
+    <h1>Header One</h1>
+    <h2>Header One</h2>
+    <p>Have a great day</p>
+    
+
+    <button id="in">Show</button>
+</body>
+</html>

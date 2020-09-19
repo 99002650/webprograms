@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-2.2.3.min.js" ></script>
+    <script>
+        $(document).ready(function(){
+            $('p').click(function(event){
+                // event.preventDefault();
+                $('[href]').text('Search here');
+                $('a').attr('href','http://www.google.com')
+            });
+           
+        });
+    </script>
+</head>
+<body>
+    <a href='http://www.google.com'>Click Here</a>
+</body>
+</html>

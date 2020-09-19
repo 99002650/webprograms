@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+    <script>
+        $(document).ready(function(){
+         $('#name').val('Raju');
+          $('#show').click(function(){
+           mydiv = $('#mydiv').html();
+           console.log(mydiv)
+           mypara = $('p').text();
+           console.log(mypara);
+           console.log($('#username').val());
+        });
+        $('#change').click(function(){
+           $('#mydiv').html('Text changed in div');
+           $('p').text('Text changed in paragraph');
+           $('#username').val('Raju');
+        });
+        $('#showName').click(function(){
+           $('#myid').html($('#name').val());
+           
+        });
+        });
+    </script>
+   
+</head>
+<body>
+    <div id = "mydiv">Inside div</div>
+    <p>Inside p</p>
+    <input type="text"  id="username">
+   
+    <button id="show">Show</button>
+    <button id="change">Change</button>
+<br>
+    <input type="text"  id="name">
+    <button id="showName">Show</button>
+    <div id = "myid"></div>
+</body>
+</html>

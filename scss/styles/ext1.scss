@@ -1,0 +1,19 @@
+$bgcolor:red;
+$color:yellow;
+$text:uppercase; 
+
+
+h2{
+   $bgcolor:purple;
+   background-color: $bgcolor;
+   color:$color;
+}
+
+p{
+    $color:green !global;
+    color:$color;
+}
+h3{
+    background-color: $bgcolor;
+    color:$color;
+}
