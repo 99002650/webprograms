@@ -23,5 +23,6 @@ console.log(msg);
 
 let price = 90;
 let quantity =45;
+
 console.log(`Total cost is, ${price*quantity}`);
 console.log('Total cost is',(price*quantity));

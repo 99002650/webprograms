@@ -30,7 +30,7 @@ total();
 // }
 // ntotal();
 //parameters have own scope
-total = function(x=1,y=2,z=3){
+total = function(x=1,y,z){
     console.log(arguments.length);
     console.log(x+y+z);
 }

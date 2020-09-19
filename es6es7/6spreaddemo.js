@@ -18,7 +18,7 @@ console.log( Math.max(10,...arr1,20, ...arr2) );
 
 
 let msg="Hello";
-console.log([...msg]);
+console.log(...msg);
 
 'Spring in action'
 // 'javascript'

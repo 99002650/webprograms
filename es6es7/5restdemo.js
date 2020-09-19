@@ -1,3 +1,4 @@
+
 var sumfun =(arr)=>{
    let sum = 0;
     for(let i in arr) 
@@ -32,3 +33,7 @@ function sumNumbers(...args){
 }
 console.log(sumNumbers(30,null,40,undefined,60,'30abc'))
 console.log(sumNumbers(30,null,40,undefined,60,parseInt('30abc')))
+
+
+
+

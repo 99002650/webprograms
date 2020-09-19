@@ -1,4 +1,5 @@
-//Destructuring- breaking down a complex structure into simpler parts. 
+//Destructuring- breaking down a complex structure 
+//into simpler parts. 
 arr = [1,2,3];
 var[a,b,c] = arr;
 console.log(a);
@@ -22,10 +23,11 @@ var student={
 var details = (s)=>{
     console.log(s.hobby)
 }
-var details = ({name,city,hobby})=>{
+details(student);
+var ndetails = ({name,city,hobby})=>{
     console.log(hobby)
 }
-details(student);
+ndetails(student);
 
 var firstName = 'Kumaran'
 let greeting= `Hi ${firstName}`;
